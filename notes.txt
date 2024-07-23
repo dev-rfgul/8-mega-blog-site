@@ -1,0 +1,4 @@
+1:first of all the env variable in "create-react-app" should start with "REACT_APP" and to access it we have to usse the full name of the variable with the "process.env" and in vite it should start with "VITE_" and it is different for every library.
+
+
+2:redux tool is being used for tracking to see wether the user is login or not.
