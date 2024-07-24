@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Container, PostCard } from "../components";
-import appWriteService from "../../appwrite/config";
+import appWriteService from "../appwrite/config";
 import { set } from "react-hook-form";
 
 function AllPosts() {
