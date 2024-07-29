@@ -33,8 +33,6 @@
 
 // export default App;
 
-
-
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import authService from "./appwrite/auth";
@@ -51,8 +49,9 @@ const App = () => {
     console.log(typeof authService.getCurrentUser); // Ensure getCurrentUser is a function
 
     // Ensure getCurrentUser is a function before calling it
-    if (typeof authService.getCurrentUser === 'function') {
-      authService.getCurrentUser()
+    if (typeof authService.getCurrentUser === "function") {
+      authService
+        .getCurrentUser()
         .then((userData) => {
           if (userData) {
             dispatch(login({ userData })); // Ensure this matches the expected payload
@@ -81,7 +80,9 @@ const App = () => {
     </div>
   ) : (
     // Optional: Add a loading indicator
-    <div>Loading...</div>
+    <div className="flex items-center justify-center h-screen">
+    <div className="w-44 h-44 border-8 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+  </div>
   );
 };
 
